@@ -13,7 +13,7 @@
 	<title>HaYoTrip好遊趣</title>
 </head>
 <body>
-	<nav class="navbar-hyt navbar sticky-top navbar-expand-lg navbar-light bg-light">
+ 	<nav class="navbar-hyt navbar sticky-top navbar-expand-lg navbar-light bg-light">
 		<div class="container">
 			<a class="navbar-brand" href="index.html">
 				<img src="img/logo_d.png">
@@ -33,7 +33,7 @@
 						<a class="nav-link" href="#">最新消息</a>
 					</li>
 				</ul>
-				<a href="login.html" class="btn-nav">登入/註冊</a>
+				<a class="btn-nav" data-bs-toggle="modal" href="#loginToggle" role="button">登入/註冊</a>
 			</div>
 		</div>
 	</nav>
@@ -547,6 +547,179 @@
 			</div>
 		</div>
 	</footer>
+
+
+	<!-- modal begin -->
+
+		<!-- login -->
+		<div class="modal fade" id="loginToggle" aria-hidden="true" aria-labelledby="loginLabel" tabindex="-1">
+		  <div class="modal-dialog modal-dialog-centered">
+		    <div class="modal-content">
+			    <div class="modal-body">
+					<div class="container-fluid">
+						<div class="row">
+			       			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							<div class="col-md-5">
+								<div class="login-box d-grid py-5 gap-3 px-3">
+									<h5>會員登入</h5>
+									<button class="btn btn-fb"><img src="../img/icon-fb.svg"> 使用Facebook</button>
+									<button class="btn btn-line"><img src="../img/icon-line.svg"> 使用Line</button>
+									<button class="btn btn-google"><img src="../img/icon-google.svg"> 使用Google</button>
+									<div class="divider">
+										<p class="text-secondary"><small>或</small></p>
+									</div>
+
+									<div>
+									  <label for="inputEmail" class="form-label">電子郵件</label>
+									  <input type="email" class="form-control" id="inputEmail" placeholder="example@example.com">
+									</div>
+
+									<div>
+									  <label for="inputPassword" class="col-sm-2 col-form-label">密碼</label>
+   									  <input type="password" class="form-control" id="inputPassword" placeholder="至少4位數字/中英字母">
+									</div>
+									<div class="d-flex justify-content-end">
+										<a class="link-hyt" data-bs-target="#forgetPasswordToggle" data-bs-toggle="modal" data-bs-dismiss="modal">忘記密碼?</a>
+									</div>
+									<button class="btn btn-login">登入</button>
+									<div class="border-top border-secodary mt-2 py-2">
+										<p>還不是旅遊咖嗎？
+											<a class="link-hyt" data-bs-target="#signupSocialToggle" data-bs-toggle="modal" data-bs-dismiss="modal">立即註冊</a>
+										</p>
+									</div>
+								</div> 
+							</div>
+							<div class="col-md-7 p-0">
+								<div class="img-box bg-hyt"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+		    </div>
+		  </div>
+		</div>
+
+		<!-- forget password -->
+		<div class="modal fade" id="forgetPasswordToggle" aria-hidden="true" aria-labelledby="forgetPasswordToggleLabel" tabindex="-1">
+		  <div class="modal-dialog modal-dialog-centered">
+		    <div class="modal-content">
+		      <div class="modal-body">
+		        <div class="container-fluid">
+					<div class="row">
+		       			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						<div class="col-md-5">
+							<div class="login-box d-grid py-5 gap-3 px-3">
+								<h5>會員登入</h5>
+								<button class="btn btn-fb"><img src="../img/icon-fb.svg"> 使用Facebook</button>
+								<button class="btn btn-line"><img src="../img/icon-line.svg"> 使用Line</button>
+								<button class="btn btn-google"><img src="../img/icon-google.svg"> 使用Google</button>
+								<div class="divider">
+									<p class="text-secondary"><small>或</small></p>
+								</div>
+
+								<div>
+								  <label for="inputEmail" class="form-label">忘記密碼</label>
+								  <input type="email" class="form-control" id="inputEmail" placeholder="example@example.com">
+								</div>
+								<button class="btn btn-login">確認送出</button>
+								<p><a class="link-hyt" data-bs-target="#loginToggle" data-bs-toggle="modal" data-bs-dismiss="modal">取消</a></p>
+								<div class="border-top border-secodary mt-2 py-2">
+									<p>還不是旅遊咖嗎？
+										<a class="link-hyt" data-bs-target="#signupSocialToggle" data-bs-toggle="modal" data-bs-dismiss="modal">立即註冊</a>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-7 p-0">
+							<div class="img-box bg-hyt"></div>
+						</div>
+					</div>
+				</div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		<!-- signup social-->
+		<div class="modal fade" id="signupSocialToggle" aria-hidden="true" aria-labelledby="signupSocialToggleLabel" tabindex="-1">
+		  <div class="modal-dialog modal-dialog-centered">
+		    <div class="modal-content">
+		      <div class="modal-body">
+		        <div class="container-fluid">
+					<div class="row">
+		       			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						<div class="col-md-5">
+							<div class="login-box d-grid py-5 gap-3 px-3">
+								<button class="btn btn-fb"><img src="../img/icon-fb.svg"> 使用Facebook</button>
+								<button class="btn btn-line"><img src="../img/icon-line.svg"> 使用Line</button>
+								<button class="btn btn-google"><img src="../img/icon-google.svg"> 使用Google</button>
+								<div class="divider">
+									<p class="text-secondary"><small>或</small></p>
+								</div>
+								<button class="btn btn-login" data-bs-target="#signupMailToggle" data-bs-toggle="modal" data-bs-dismiss="modal">使用Eamil</button>
+								<p>繼續進行下一步驟，及代表您同意我們的<b>服務條款</b>、<b>隱私權政策</b>及<b>免責聲明</b></p>
+								<div class="border-top border-secodary mt-2 py-2">
+									<p>已經是旅遊咖嗎？
+										<a class="link-hyt" data-bs-target="#loginToggle" data-bs-toggle="modal" data-bs-dismiss="modal">馬上登入會員</a>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-7 p-0">
+							<div class="img-box bg-hyt"></div>
+						</div>
+					</div>
+				</div>
+		      </div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		<!-- signup mail-->
+		<div class="modal fade" id="signupMailToggle" aria-hidden="true" aria-labelledby="signupMailToggleLabel" tabindex="-1">
+		  <div class="modal-dialog modal-dialog-centered">
+		    <div class="modal-content">
+		      <div class="modal-body">
+		       	<div class="container-fluid">
+					<div class="row">
+		       			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						<div class="col-md-5">
+							<div class="login-box d-grid py-5 gap-3 px-3">
+								<h5>新朋友註冊</h5>
+								<div>
+									<label for="inputEmail" class="form-label">電子郵件</label>
+									<input type="email" class="form-control" id="inputEmail" placeholder="example@example.com">
+								</div>
+								<div>
+									<label for="inputPassword" class="col-sm-2 col-form-label">密碼</label>
+									<input type="password" class="form-control" id="inputPassword" placeholder="至少4位數字/中英字母">
+								</div>
+								<div>
+									<label for="inputEmail" class="form-label">手機號碼</label>
+									<input type="tel" class="form-control" id="inputEmail" placeholder="請勿輸入任何符號及空白">
+								</div>
+								<button class="btn btn-login">註冊</button>
+								<p>繼續進行下一步驟，及代表您同意我們的<b>服務條款</b>、<b>隱私權政策</b>及<b>免責聲明</b></p>	
+								<p><a class="link-hyt" data-bs-target="#loginToggle" data-bs-toggle="modal" data-bs-dismiss="modal">取消</a></p>
+								<div class="border-top border-secodary mt-2 py-2">
+									<p>已經是旅遊咖嗎？
+										<a class="link-hyt" data-bs-target="#loginToggle" data-bs-toggle="modal" data-bs-dismiss="modal">馬上登入會員</a>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-7 p-0">
+							<div class="img-box bg-hyt"></div>
+						</div>
+					</div>
+				</div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+	<!-- modal end -->
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>

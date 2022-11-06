@@ -44,6 +44,62 @@ h1,h2,h3,h4,h5,h6,p,a{
 	padding-top: 5px;
 }
 
+/* modal */
+@media (min-width: 576px){
+	.modal-dialog{
+	    max-width: 800px;
+	    margin: 1.75rem auto;
+	}
+}
+.modal-body{
+	position: relative;
+	padding: 0;
+}
+.modal-body .btn-close{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+.btn-fb{
+	background-color: #425893;
+	color: #ffffff;
+	text-align: left;
+	padding-left: 2em;
+	padding-right: 2em;
+}
+.btn-line{
+	background-color: #50B033;
+	color: #ffffff;
+	text-align: left;
+	padding-left: 2em;
+	padding-right: 2em;
+}
+.btn-google{
+	background-color: #ffffff;
+	border: 1px solid #E2E6EA;
+	text-align: left;
+	padding-left: 2em;
+	padding-right: 2em;
+}
+.btn-login{
+	background-color: #00A15A;
+	color: #ffffff;
+	text-align: left;
+	padding-left: 2em;
+	padding-right: 2em;
+}
+#loginToggle .img-box,
+#forgetPasswordToggle .img-box,
+#signupSocialToggle .img-box,
+#signupMailToggle .img-box{
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/img-login.png);
+	background-size: cover;
+	background-position: center center;
+}
+
+
 /* navbar */
 .navbar.navbar-hyt{
 	box-shadow: 0px 3px 0 rgba(0,0,0,.1);
@@ -817,4 +873,28 @@ footer .copyright{
 }
 .bar-chart.hyt .bar-chart--inner {
   background: #00A15A;
+}
+
+
+.divider{
+	width: 100%;
+	position: relative;
+	text-align: center;
+}
+.divider::after{
+	content: '';
+	display: block;
+	width: 100%;
+	height: 1px;
+	background-color: #cccccc;
+	position: absolute;
+	bottom: 50%;
+}
+.divider p{
+	padding: 2px;
+	display: inline-block;
+	background-color: #fff;
+	margin-bottom: 0;
+	position: relative;
+	z-index: 1;
 }
